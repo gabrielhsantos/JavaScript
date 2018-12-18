@@ -15,6 +15,5 @@ exports = { // objeto não será retornado
 console.log(module.exports)
 
 module.exports = { //Sempre que precisar criar um novo objeto
-    publico : true
+    publico : false
 }
-
