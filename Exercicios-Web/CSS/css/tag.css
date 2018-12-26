@@ -1,0 +1,24 @@
+body {
+    font-size: 40px; /* por herança para os componentes filhos */
+}
+
+ul, ol {
+    padding: 0;
+}
+
+li {
+    margin-left: 60px;
+}
+
+.tag {
+    border: solid 4px; /* para todos os componentes que tiverem a classe tag */
+    margin: 5px; 
+}
+
+.tag label {
+    color: #fff;
+    font-size: 25px;
+    vertical-align: top;
+    margin-right: 10px;
+    padding: 0px 5px 3px 3px;
+}

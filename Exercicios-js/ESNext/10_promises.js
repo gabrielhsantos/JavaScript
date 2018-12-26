@@ -11,9 +11,9 @@ function falarDepoisDe(segundos, frase) { //quantos segundos/imprimir a frase
 }
 
 falarDepoisDe(3, 'Que Legal!')
-.then(frase => frase.concat('?!?')) // função then() é chamada quando resolve a promisse 
-.then(outraFrase => console.log(outraFrase))
-.catch(frase => console.log(frase)) // caso seja um reject no lugar de um resolve
+.then(f => f.concat('?!?')) // função then() é chamada quando resolve a promisse 
+.then(oF => console.log(oF))
+//.catch(frase => console.log(frase)) // caso seja um reject no lugar de um resolve
 
 console.log('Vou Antes!!!!') // irá ser impressa antes, pois o promise é assincrono 
 

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Box Model</title>
+    <style>
+        body {font-size: 80px; margin: 0;}
+        .c1 {background: linear-gradient(to right, rgb(182, 6, 6), rgb(216, 216, 16));}
+        .c2 {background: linear-gradient(to right, rgb(0, 89, 255), rgb(159, 158, 218));}
+        .c3 {background: linear-gradient(to right, rgb(12, 163, 12), rgb(127, 248, 202));}
+
+        div {
+            float: left; /* Faz com que os elementos percam o conceito de 'block' e caiam para a esquerda na mesma linha*/
+            padding-top: 100px;
+            padding: 10px 50px 100px 150px;
+            padding: 100px 50px;
+            padding: 50px;
+            margin: 0px 20px;
+            border: solid 15px black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c1">1</div>
+    <div class="c2">2</div>
+    <div class="c3">3</div>
+</body>
+
+</html>

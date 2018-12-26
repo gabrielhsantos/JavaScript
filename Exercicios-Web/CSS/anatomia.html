@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Anatomia CSS</title>
+    <style>
+        .seletor {
+            color: #fff; /* cor da fonte */
+            font-size: 30px; /* tamanho da fonte */
+            text-align: center; /* centraliza o texto */
+
+            /* Múltiplos Valores (Shorthand Property)*/
+            border: solid 5px navy; /* cria uma borda, sólida de 5px na cor navy */
+            font-family: Helvetica, sans-serif; /* define a fonte, (caso não haja a fonte, o browser lança uma segunda opção) */
+        
+            /* FUNÇÕES */
+            width: calc(100% - 100px); /* largura da div de 100% da tela - 100px */
+            background-color: rgb(34, 153, 189); /* define o fundo da div com a função de cores rgb (Red Green Blue) */        
+        }
+            /* usando uma pseudo-classe com : */
+        .seletor:hover { /* hover é o passar de mouse por cima da div */
+            background-color: orangered; /* ao passar o mouse apenas */
+        }
+
+        /* usando um pseudo-elemento com :: */
+        .seletor::first-letter{ /* define a primeira letra contida na div */
+            font-size: 60px;
+            font-weight: bold; /* função que altera a fonte para negrito(neste caso) */
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="seletor">Conteúdo</div>
+</body>
+
+</html>

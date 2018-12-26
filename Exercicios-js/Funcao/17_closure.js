@@ -16,3 +16,12 @@ function fora() {
 const minhaFuncao = fora()
 console.log(minhaFuncao())
 
+console.log('======= Teste =========')
+
+const y = 'Global'
+
+fora2 = (dentro2 = (y ='Local') => y) => dentro2
+
+const teste = fora2()
+console.log(teste())
+

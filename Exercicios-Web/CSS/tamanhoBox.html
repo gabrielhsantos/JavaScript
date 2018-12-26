@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tamanho Box</title>
+    <style>
+        * {
+            box-sizing: border-box; /* Posso usar dentro do seletor universal e não é preciso 
+            informar dentro de outros seletores */
+        }
+
+        body {
+            font-size: 45px;
+            margin: 0;
+        }
+
+        div {
+            background-color: deepskyblue;
+            width: 100%; /* 100% da largura do body */
+            height: 300px;
+            padding: 100px; /* O Padding não respeita o 100% */
+            border: solid 20px; /* O Border ultrapassa os 100% também */
+            box-sizing: content-box; /* Não considera o padding e o border */
+            box-sizing: border-box; /* associa o content + padding + border dentro de 100% */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        O tamanho do Box é...
+    </div>
+</body>
+</html>

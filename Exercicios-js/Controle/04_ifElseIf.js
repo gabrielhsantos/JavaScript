@@ -1,4 +1,4 @@
-Number.prototype.entre = function (inicio, fim) {
+Number.prototype.entre = function (inicio, fim) { // criação de uma função dentro de Number
     return this >= inicio && this <= fim
 }
 

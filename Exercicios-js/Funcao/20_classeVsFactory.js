@@ -1,8 +1,8 @@
 console.log('==========CLASSE============')
 
 class Pessoa {
-    constructor(nome) {
-        this.nome = nome
+    constructor(name) {
+        this.nome = name
     }
 
     falar() {
@@ -10,7 +10,7 @@ class Pessoa {
     }
 }
 
-const p1 = new Pessoa('Gabriel')
+const p1 = new Pessoa('Gabriel') // construtor
 p1.falar()
 
 console.log('==========FACTORY============')

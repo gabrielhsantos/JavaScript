@@ -29,5 +29,5 @@ console.log(aprovados)
 aprovados = ['Thomas', 'Ana', 'Gabriel']
 aprovados.splice(1, 2) // a partir do indice 1, irá excluir 2 elementos
 console.log(aprovados)
-aprovados.splice(1, 0, 'Ana', 'Gabriel') // a partir do indice 1, irá incluir os valores
+aprovados.splice(1, 0, 'Ana', 'Gabriel') // a partir do indice 1, irá excluir 0 índices e incluir os valores de ''
 console.log(aprovados)

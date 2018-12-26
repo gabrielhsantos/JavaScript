@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Position</title>
+    <style>
+        div {
+            font-size: 60px;
+            padding: 30px;
+            border: solid 5px #222;
+            color: #fff;
+        }
+
+        .static { 
+            top: 100px; /* como ele é um elemento static(padrão)... */
+            left: 100px; /* ... não levará em conta esses dois modificadores */
+            background-color: steelblue;
+        }
+
+        .fixed { /* Se posiciona de forma absoluta, ignorando os outros elementos na página */
+            position: fixed; /* com essa marcação, o elemento fica fixado na página, mesmo qndo há o rolamento */
+            bottom: 30px;
+            right: 0px;
+            background-color: tomato;
+        }
+
+        .relative1 { /* leva em consideração o elemento anterior(neste caso, o fixed saiu de cena) */
+            position: relative;
+            left: 50px;
+            top: 5px;
+            background-color: seagreen;
+        }
+
+        .absolute1 { /* se posiciona em consideração a página como um todo e ignora os outros elementos */
+            position: absolute;
+            left: 350px;
+            top: 120px;
+            background-color: violet;
+        }
+
+        .relative2 {
+            position: relative;
+            left: 250px;
+            top: 2000px;
+            height: 200px;
+            width: 200px;
+            background-color: slategray
+        }
+
+        .absolute2 { /* se portará como absolute, dentro da tag pai(div) */
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            height: 20px;
+            width: 20px;
+            background-color: orange;
+        }
+
+        .sticky { 
+            position: -webkit-sticky; /* para o Safari  */
+            position: sticky; /* posiciona e fica presa na tela */
+            background-color: #777;
+            top: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="static">Static (Padrão)</div>
+    <div class="fixed">Fixed</div>
+    <div class="relative1">Relative</div>
+    <div class="absolute1">Absolute</div>
+
+    <div class="relative2">
+        <div class="absolute2"></div>
+    </div>
+
+    <div class="sticky">Sticky</div>
+    <p style="padding-bottom: 2000px;">Opa</p>
+</body>
+
+</html>

@@ -2,8 +2,8 @@
 
 const saudacao = 'Opa' // contexto léxico 1
 
-function exec() {
-    const saudacao = 'Olá' // contexto léxico 2
+function exec(saudacao) {
+    //const saudacao = 'Olá' // contexto léxico 2
     return saudacao
 }
 
@@ -20,6 +20,6 @@ const cliente = {
 }
 
 console.log(saudacao)
-console.log(exec())
+console.log(exec('Olá'))
 console.log(cliente)
 

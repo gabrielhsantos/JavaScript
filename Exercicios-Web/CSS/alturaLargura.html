@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Altura e Largura</title>
+    <style>
+
+        html{
+            height: 100%; /* 100% do tamanho da tela no momento */
+            }
+
+        body {
+            font-size: 40px;
+            background-color: coral;
+            height: 100%;
+            margin: 0;
+        }
+
+        div {
+            background-color: seagreen;
+        }
+
+        span {
+            background-color: dodgerblue;
+        }
+
+        span, div { /* % é usada como referência o tamanho do body */
+            width: 50%;  /* Por padrão o body já ocupa a largura toda */
+            height: 250px;  /* Quando colocado em pixels, é aceito e acrescido no tamanho do body */        
+            height: 50%; /* Body é expansível e não ocupa a altura toda */
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div>Título</div>
+    <span>Subtítulo</span>
+</body>
+
+</html>

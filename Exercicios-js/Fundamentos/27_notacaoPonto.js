@@ -6,8 +6,8 @@ obj1.nome = 'Bola'
 
 console.log(obj1.nome)
 
-function Obj(nome) {
-    this.nome = nome
+function Obj(name) {
+    this.nome = name
     this.etc = function() {
         console.log('Etc...')
     }

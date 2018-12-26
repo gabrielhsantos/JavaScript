@@ -5,21 +5,23 @@ function soBoaNoticia(nota) {
 }
 
 soBoaNoticia(8.1)
-soBoaNoticia(6.1)
+soBoaNoticia(6.1) // não passou pelo if
 
 function seForVerdadeEuFalo(valor) {
-    if (valor) {
+    if (valor) { // o if, passa apenas a condição true
         console.log('É verdade...' + valor)
     }
 }
 
-seForVerdadeEuFalo()
-seForVerdadeEuFalo(null)
+// false
+seForVerdadeEuFalo() 
+seForVerdadeEuFalo(null) 
 seForVerdadeEuFalo(undefined)
 seForVerdadeEuFalo(NaN)
 seForVerdadeEuFalo('')
 seForVerdadeEuFalo(0)
 
+// true
 seForVerdadeEuFalo(-1)
 seForVerdadeEuFalo(' ')
 seForVerdadeEuFalo('?')

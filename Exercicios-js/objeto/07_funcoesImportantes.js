@@ -26,11 +26,11 @@ Object.entries(pessoa).forEach(([chave, valor]) => {
     fará isso para cada atributo do objeto pessoa
 */
 
-//Função para atributos novos
+//Propriedades para atributos novos
 Object.defineProperty(pessoa, 'dataNascimento', { //1° o nome do objeto, 2° o nome da chave
-    enumerable: true, //passivel a ser listada
+    enumerable: true, // passivel a ser listada
     writable: false, // modificação
-    value: '01/01/2019' // valor da variável 
+    value: '01/01/2019' // valor do atributo 
 })
 pessoa.dataNascimento = '01/01/2017' // não irá mudar, pois o atributo está "freeze"
 console.log(pessoa.dataNascimento)

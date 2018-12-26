@@ -1,7 +1,7 @@
 // operador ... rest(juntar)/spread(espalhar)
 // usar rest com parâmetro de função
 
-// usar spread comobjeto
+// usar spread com objeto
 const funcionario = {
     nome: 'Ana',
     salario: 12348.99

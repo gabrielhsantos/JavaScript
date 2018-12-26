@@ -1,8 +1,8 @@
 function real(partes, ...valores) {
     const resultado = []
-    valores.forEach((valor, indice) => {
-        valor = isNaN(valor) ? valor : `R$${valor.toFixed(2)}`
-        resultado.push(partes[indice], valor)
+    valores.forEach((a, b) => {
+        a = isNaN(a) ? a : `R$${a.toFixed(2)}`
+        resultado.push(partes[b], a)
     })
     return resultado.join('')
 }

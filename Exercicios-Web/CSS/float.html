@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Float</title>
+    <style>
+        body {
+            background-color: #222;
+        }
+
+        .c1 {
+            background-color: red;
+            float: right; /* o elemento c1 irá flutuar para o lado direito da tela */           
+        }
+
+        .c2 {
+            background-color: green;
+            clear: right; /* Faz com que o float do elemento anterior seja considerado como block */
+            float: left;
+        }
+        
+        .c3 {
+            background-color: blue;
+            clear: both; /* Considera ambos os floats */
+        }
+
+        .c4 {
+            background-color: orange;
+            float: right;
+        }
+
+        div {
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c1"></div>
+    <div class="c2"></div>
+    <div class="c3"></div>
+    <div class="c4"></div>
+</body>
+
+</html>

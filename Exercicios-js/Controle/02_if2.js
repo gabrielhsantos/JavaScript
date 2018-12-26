@@ -1,11 +1,11 @@
 function teste1(num) {
     if (num > 7)
-        console.log(num)
+        console.log(num) // está dentro do bloco if
     console.log('Final') // sem o bloco, essa linha irá executar de qlqr forma
 }
 
-teste1(6)
-teste1(8)
+teste1(6) // false
+teste1(8) // true
 
 function teste2(num) {
     if(num > 7); { // o ; é uma sentença de código vazia e não fará nada

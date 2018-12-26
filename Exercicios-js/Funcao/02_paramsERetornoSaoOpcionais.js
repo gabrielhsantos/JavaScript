@@ -3,7 +3,7 @@ function area(largura, altura) {
     if(area > 20) {
         console.log(`Valor acima do permitido: ${area}m2.`) // dará no final um undefined
     } else {
-        return area
+        return area // dará no final um undefined, pois não é interação com o console
     }
 }
 

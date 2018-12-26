@@ -1,17 +1,22 @@
 const notas = [7.7, 6.5, 5.2, 8.9, 3.6, 7.1, 9.0]
 
-
 // Sem Callback
 let notasBaixas1 = []
+let notasAltas1 = []
 for(let nota in notas) {
     if(notas[nota] < 7) {
         notasBaixas1.push(notas[nota])
+    } else {
+        notasAltas1.push(notas[nota])
     }
 }
 console.log(notasBaixas1)
+console.log(notasAltas1)
+
+console.log('=======================')
 
 // Com callback
-notasBaixas2 = notas.filter(function (nota) {return nota < 7})
+const notasBaixas2 = notas.filter(function (nota) {return nota < 7}) // .filter() = Parecido com um forEach()
 console.log(notasBaixas2)
 
 // Com callback e Arrow
@@ -35,14 +40,4 @@ filter() é uma função callback, que irá filtrar cada elemento em um array
 e o seu resultado vai ser um novo array com os resultados true do array inicial
 
 */
-
-
-
-
-
-
-
-
-
-
 

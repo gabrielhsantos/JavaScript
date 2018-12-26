@@ -16,15 +16,15 @@ const { nome, idade } = pessoa
 console.log(nome, idade)
 
 console.log('==========')
-const { nome: n, idade: i } = pessoa
+const { nome: n, idade: i } = pessoa // dando apelidos para os atributos
 console.log(n, i)
 
 console.log('==========')
-const { sobrenome, bemHumorada = true } = pessoa
+const { sobrenome, bemHumorada = true } = pessoa // atributo sobrenome não está setado
 console.log(sobrenome, bemHumorada)
 
 console.log('==========')
-const { endereco: { logradouro, numero, cep } } = pessoa
+const { endereco: { logradouro, numero, cep } } = pessoa // operador dentro de operador
 console.log(logradouro, numero, cep)
 
 
