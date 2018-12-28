@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Trabalhando com Eventos #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+        <a espera-um-pouco href="https://google.com.br">Google</a>
+    </div>
+    <script>
+        
+        const div = document.querySelector('div')
+
+        function navegarEm5s(e) {
+            e.preventDefault() // com esta função, o comportamento normal não ocorrerá
+            console.log('Navegando em 5 segundos....')
+            
+            setTimeout(() => {
+                const link = e.target
+                window.location.href = link.href
+                //window.location.href = a busca do browser
+            }, 5000)
+            div.insertAdjacentHTML('afterend', '<p>Navegando em 5 segundos....</p>')
+        }
+        
+        //const a = document.querySelector('a')
+        //a.setAttribute('onclick', 'navegarEm5s(event)')
+        //a.onclick = navegarEm5s
+
+        const a = document.querySelector('[espera-um-pouco]')
+        a.onclick = navegarEm5s
+
+    </script>
+</body>

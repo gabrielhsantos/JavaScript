@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Acessando Atributos #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        <a href='https://www.cod3r.com.br'>Cod3r</a>
+    </div>
+    <div id='primeiro'>
+        <img src='http://files.cod3r.com.br/curso-web/logo-estreita.png' alt='logo'>
+    </div>
+    <script>
+        //const img = document.querySelector('.img') // seleciona um elemento do tipo classe
+        //const img = document.querySelector('#img') // seleciona um elemento do tipo id
+        //const img = document.querySelector('[img]') // seleciona um elemento do tipo propriedade
+        const img = document.querySelector('img') // seleciona um elemento do tipo tag
+        
+        // Acessando o atributo
+        console.log('getAttribute:', img.getAttribute('src')) // acessa o atributo src da tag img
+        
+        // Outra opção
+        console.log('src:', img.src)
+
+        // Outra opção
+        console.log('["src"]:', img['src'])
+
+        // Acessando o atributo alt
+        console.log('alt:', img.alt)
+
+        console.log('Elemento "img"..........')
+
+        console.log('NodeType:', img.nodeType) // todos os elementos e atributos possuem o nodeType
+        // nodeType 1 = elemento
+        // nodetype 2 = atributo
+        //https://www.w3schools.com/jsref/prop_node_nodetype.asp
+        console.log('NodeName:', img.nodeName)
+
+        console.log('Atributo "src"..........')
+
+        const src = img.getAttributeNode('src') // o Node trará um nó que representa o atributo
+        console.log('NodeType:', src.nodeType)
+        console.log('NodeName:', src.nodeName)
+        console.log('NodeValue:', src.nodeValue) // irá passar o valor da url associado ao nó
+    
+        console.log('Elemento "a"..........')
+    
+        const link = document.querySelector('a')
+        console.log('href:', link.href) // valor
+        console.log('NodeType:', link.nodeType)
+        console.log('NodeName:', link.nodeName)
+        
+        // Primeiro filho
+        console.log('firstChild.nodeType:', link.firstChild.nodeType)
+    
+        // Alterando diretamente
+        link.firstChild.nodeValue = 'Novo Texto'
+    
+        // Outra opção
+        link.innerHTML = 'Outra Opção'
+        
+    </script>
+</body>
+
+</html>

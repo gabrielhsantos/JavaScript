@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <script>
+        const body = document.querySelector('body')
+
+        // Criando elementos
+        const div1 = document.createElement('div') // criando a tag
+        div1.classList.add('destaque') // criando a classe
+        div1.innerHTML = 'Primeiro' // Conteúdo     
+        
+        const div2 = document.createElement('div')
+        div2.setAttribute('data-atributo', 'valor')
+        div2.innerHTML = 'Segundo'
+
+        const p = document.createElement('p')
+        p.innerHTML = 'Terceiro'
+        
+        const div3 = document.createElement('div') 
+        div3.appendChild(p) // adiciona o elemento dentro do outro na última posição
+
+        // Add no body
+
+        body.appendChild(div1)
+        body.appendChild(div2)
+        body.appendChild(div3)
+        
+        // Insert Before(antes)
+        const texto = document.createTextNode('Antes....')
+        div3.insertBefore(texto, div3.childNodes[0]) // Inserir o texto antes do nó 1
+        // 1° é passado o elemento, 
+        // 2° depois a função insertBefore()
+        // 3° é criado um node informando o elemento filho 
+        // 4° o elemento filho é inserido na posição determinada 
+        // (Neste caso, antes do elemento 0)
+
+        // Criando um clone
+        const div4 = div3.cloneNode(true) // Deep true, copia até os filhos    
+
+        body.appendChild(div4)
+        body.removeChild(div3)
+        div1.classList.remove('destaque')
+
+    </script>
+</body>
+
+</html>

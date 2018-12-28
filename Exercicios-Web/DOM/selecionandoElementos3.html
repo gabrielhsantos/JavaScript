@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #03</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        form input,
+        form select,
+        form button {
+            margin: 10px;
+            font-size: 1.6em;
+        }
+    </style>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Formulário</h1>
+    <form name="pesquisa" action="http://www.google.com.br/search">
+        <input type="text" name="q" placeholder="Digite o termo...">
+        <select name="hl">
+            <option value="pt-br">Português (Brasil)</option>
+            <option value="en-us">Inglês (Americano)</option>
+        </select>
+        <button>Pesquisar</button>
+    </form>
+    <script>
+        console.log(document.forms) // selecionando o forms, trará um array de todos os formulários
+        console.log(document.forms[0]) // seleção por índice
+        
+        console.log(document.getElementsByName('pesquisa')) // node List 
+        console.log(document.getElementsByTagName('form')) // html colection
+
+        console.log(document.pesquisa) // irá procurar um elemento com o nome pesquisa
+        console.log(document.pesquisa.q) // irá localizar um elemento de nome q dentro de pesquisa
+
+        document.pesquisa.q.value = 'Linux' //setando o valor pelo JS
+        document.pesquisa.hl.value = 'en-us' // setando a seleção
+
+        console.log(document.pesquisa.hl.selectedIndex) // informa qual o índice selecionado a partir da consulta
+    </script>
+</body>
+
+</html>

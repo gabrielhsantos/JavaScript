@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Trabalhando com Eventos #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <div>Elemento</div>
+    <script>
+        const item = document.querySelector('div')
+        item.style.position = 'absolute' // posicionar com css de forma absoluta
+        
+        item.onmousemove = e => {
+            const item = e.target
+            item.style.cursor = 'move'
+            if (e.buttons) { // se for clicado, será diferente de 0, ou seja...true
+                // Eixo Vertical (Y)
+                item.style.top = `${e.clientY - (item.clientHeight / 2)}px` // quando clicado, ficará no centro da div no eixo Y
+                // Eixo Horizontal (X)
+                item.style.left = `${e.clientX - (item.clientWidth / 2)}px` // quando clicado, ficará no centro da div no eixo X
+            }
+        }
+
+    </script>
+</body>

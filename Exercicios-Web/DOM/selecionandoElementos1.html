@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #01</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo">.terceiro .ultimo</div>
+    <script>
+        // Informando o id do elemento e add uma classe              
+        document.getElementById('primeiro') // como já espera um id, não é preciso o uso de # (pega o primeiro id com o nome apenas)
+            .classList.add('destaque') // irá modificar o elemento de acordo com o css
+    
+        // Criando uma constante que receberá a seleção de elementos da tag div
+        const divs = document.getElementsByTagName('div') // no plural
+        Array.from(divs) // Criação de um array com os elementos da lista de divs
+            .forEach(e => e.classList.remove('destaque')) // irá percorrer o array, removendo a classe destaque
+    
+        // Outra opção de transformação de lista para array
+        const divsArray = [...divs]
+        divsArray.forEach(e => e.classList.add('destaque'))
+    
+        // Selecionar elementos a partir da classe
+        const ultimosElementos = document.getElementsByClassName('ultimo')
+        for(let e of ultimosElementos) { // pelo fato de ser um interator, é possível fazer um for a partir do html colector
+            e.classList.remove('destaque') // irá percorrer e remover a classe dos elementos na lista
+        }
+
+    //OBS: ao gerar um document.getElement(s)By...
+    // é criada um html colection 
+
+    </script>
+</body>
+</html>

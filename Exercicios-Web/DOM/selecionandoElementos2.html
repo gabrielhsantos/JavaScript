@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #02</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
+    <script>
+        // no caso do querySelector, é preciso o uso do seletor CSS             
+        document.querySelector('#primeiro')
+            .classList.add('destaque')
+
+        //função para add a classe destaque
+        const selecionar = seletor =>
+            document.querySelectorAll(seletor) // selecionar mais de um elemento
+                .forEach(e => e.classList.add('destaque'))
+
+        //função para remover a classe destaque
+        const descelecionar = selector =>
+            document.querySelectorAll(selector)
+                .forEach(e => e.classList.remove('destaque'))
+        
+        selecionar('div') // selecionar todas as tags div
+        
+        descelecionar('*') // remover a classe destaque de todos os elementos
+        selecionar('.terceiro') // seleciona os elementos com a classe terceiro
+        selecionar('.terceiro.ultimo') // todos os elementos que tem a classe terceiro e a classe ultimo
+        
+        descelecionar('*')
+        selecionar(':not(#primeiro)') //pseudo-classe com negação, todos serão selecionados que não tenham o id primeiro
+        
+        descelecionar('*')
+        selecionar(':nth-child(1)') // selecionar os primeiros filhos dos elementos
+        
+        descelecionar('*')
+        selecionar('div:nth-of-type(1)') // selecionar o primeiro elemento do tipo div
+
+        descelecionar('*')
+        selecionar('[wb-attrib]') // selecionar a partir de um atributo
+
+        //OBS, diferente do getElement(s)By... é gerada uma NodeList que comporta o forEach
+    </script>
+</body>
+</html>
