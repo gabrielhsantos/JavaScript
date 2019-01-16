@@ -46,6 +46,7 @@
             }
         })
 
+        // controlando o histórico e o texto na url mesmo estando no mesmo HTML
         window.onpopstate = e => {
             if(e.state) {
                 navegarViaAjax(window.location.href, e.state.seletor, false)

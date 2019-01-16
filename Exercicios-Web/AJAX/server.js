@@ -42,6 +42,9 @@ app.post('/formulario', (req, res) => {
 })
 
 app.get('/parOuImpar', (req, res) => {
+    //req.body -> /parOuImpar/:numero -> http://localhost:8080/parOuImpar/3
+    //req.query -> /parOuImpar/:numero -> http://localhost:8080/parOuImpar?numero=3
+    //rq.params -> /parOuImpar/:numero -> http://localhost:8080/parOuImpar?numero
     const par = parseInt(req.query.numero) % 2 === 0
     res.send({
         resultado: par ? 'par' : 'impar'

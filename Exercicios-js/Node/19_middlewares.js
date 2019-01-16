@@ -1,5 +1,5 @@
 // middleware pattern (padrão middleware)
-// chain od responsability (corrente de responsabilidade)
+// chain of responsability (corrente de responsabilidade)
 
 const passo1 = (contexto, next) => {
     contexto.valor1 = 'mid1'

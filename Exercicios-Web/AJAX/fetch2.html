@@ -43,7 +43,7 @@
 
             const resultado = document.getElementById('resultado')
 
-            // COM PROMISSE
+            // fetch COM PROMISSE
             // fetch(form.action, options)
             //     .then(resp => resp.json())
             //     .then(json => {
@@ -53,7 +53,7 @@
             //         resultado.innerHTML = e
             //     })
 
-            // COM ASYNC/AWAIT
+            // fetch COM ASYNC/AWAIT
             try {
                 const resp = await fetch(form.action, options)
                 const json = await resp.json()

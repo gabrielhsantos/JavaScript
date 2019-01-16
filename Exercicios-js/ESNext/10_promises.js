@@ -1,5 +1,5 @@
 // Usa-se quando é preciso um tipo de processamento assincrono
-// podendo ser atendido ou regeitado de acordo com a situação
+// podendo ser atendido ou rejeitado de acordo com a situação
 
 function falarDepoisDe(segundos, frase) { //quantos segundos/imprimir a frase
     //return new Promise(resolve => { // função resolve é chamado quando a promessa é atendida

@@ -26,9 +26,10 @@ tr {
     border-bottom: solid 1px white;
 }
 
-td {
+td, th {
     font-size: 1.6em;
-    padding: 10px;
+    padding: 10px; 
+    text-align: center;   
 }
 
 li {

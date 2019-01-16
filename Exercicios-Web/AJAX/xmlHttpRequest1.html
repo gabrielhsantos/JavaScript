@@ -28,11 +28,25 @@
                     })
                 }
             }
+            
+            Object.entries(config).forEach(e=>console.log(e))
             // Enviando a requisição
             xhr.send()
         }
 
         function criarTabela(estados) {
+            const thid =  document.createElement('th')
+            thid.innerHTML = 'id'
+            const thnome =  document.createElement('th')
+            thnome.innerHTML = 'nome'
+            const thsigla =  document.createElement('th')
+            thsigla.innerHTML = 'sigla'
+
+            const trheader = document.createElement('tr')
+            trheader.appendChild(thid)
+            trheader.appendChild(thnome)
+            trheader.appendChild(thsigla)
+
             const linhas = estados.map(estado => { 
                     // Criação dos Títulos 
                     const tdId = document.createElement('td') // 1° table data
@@ -51,9 +65,10 @@
                     tr.appendChild(tdSigla)
 
                     return tr
-                })
-
+                })                
+                linhas.forEach(e=>console.log(e))
                 const tabela = document.createElement('table') // Criação da tag table
+                tabela.appendChild(trheader)
                 linhas.forEach(linha => tabela.appendChild(linha)) // preencher cada linha com os dados
                 document.body.appendChild(tabela)
         }

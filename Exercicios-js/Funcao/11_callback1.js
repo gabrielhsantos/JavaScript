@@ -1,7 +1,7 @@
 console.log("========================")
 const fabricantes = ["Mercedes", "Audi", "BMW"]
 
-function imprimir(a, b) {
+function imprimir(a, b) { // será o callback do forEach()
     console.log(`${b + 1}. ${a}`)
 }
 
