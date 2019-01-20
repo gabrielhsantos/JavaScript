@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Entendendo jQuery</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Entendendo jQuery</h1>
+    <div>1</div>
+    <div>2</div>
+
+    <script>
+        $('div') // Este seletor já irá criar uma lista de obj da DOM
+            .hide(2000)
+            .show(2000)
+            .fadeOut(2000)
+            // .fadeIn(2000)
+        console.log($('div') // o seletor retornou uma lista de elementos
+            .get(0)) // retorno do elemento de índice 0 da DOM a partir do seletor
+        console.log($.isEmptyObject({})) // true , objeto vazio
+        console.log($.isEmptyObject({ nome: null })) // false , obj possui attr
+        console.log(jQuery.inArray(3, [1,2,3])) // verificando se o numero 3 está dentro do array
+
+        // Criando uma função com $
+        $.fn.fundoVerde = function() {
+            this.css('background-color', 'green')
+            return this // ao retornar o próprio objeto, possibilita o encadeamento de chamadas
+        }
+
+        // Executando a função com $
+        $('body') // seleciona a tag body
+            .fundoVerde() // insere em body a função criada
+            .hide(1000) // esconde o body em 1 segundo
+            .fadeIn(1000)
+
+    </script>
+</body>

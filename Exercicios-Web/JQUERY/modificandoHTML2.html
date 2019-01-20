@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src='js/jquery.js'></script>
+</head>
+
+<body class='conteudo exercicio'>
+    <h1>Modificando HTML #02</h1>
+    <div id='div1'>1</div>
+    <div id='div2'>2</div>
+    <div id='div3'>3</div>
+    <p class='numero'>4</p>
+    <p class='numero'>5</p>
+
+    <script>
+        $('#div1').append(', 2')
+        $('#div1').prepend('0, ')
+
+        $('<span>, 3</span>').appendTo('#div1') // cria a tag e depois informa onde será inserida
+        $('<span>-1, </span>').prependTo('#div1')
+
+        $('#div2').before('<p>Antes 2</p>') // insere o conteúdo antes do elemento começar
+        $('#div2').after('<p>Depois 2</p>') // insere o conteúdo depois do elemento terminar
+
+        $('<p>Antes 3</p>').insertBefore('#div3') // primeiro cria o elemento, depois informa o seletor
+        $('<p>Depois 3</p>').insertAfter('#div3')
+
+        // $('p.numero') // seleciona todas os elementos p com propriedade de valor numero
+        //     .wrap('<div>') // wrap = envolver, envolve todos os casos cada um com uma tag div
+
+        $('p.numero').wrapAll('<div id="div4">') // envolve todos os casos em uma única div, setando o valor de id
+
+        $('#div4').empty() // irá deixar o elemento vazio
+
+        $('#div3, #div4') // informando mais de um seletor
+            .prev() // seleciona os elementos anteriores ao seletor
+            .remove() // irá remover os elementos (irá de fato excluir da DOM)
+
+        // $('<div>Substituto</div>')
+        //     .replaceAll('body > p') // irá substituir os elementos p, diretamente dentro do body, pela div criada 
+
+        $('body > p').replaceWith('<div>Substituto</div>')
+
+        $('body > p').replaceWith(function() { // função callback
+            return $('<div>').html($(this).html()).append('!!!')
+        })
+    </script>
+</body>

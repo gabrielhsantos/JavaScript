@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src='js/jquery.js'></script>
+</head>
+
+<body class='conteudo exercicio'>
+    <h1>Modificando HTML #01</h1>
+    <div id='conteudo1'></div>
+    <div id='conteudo2'></div>
+    <div id='conteudo3'></div>
+    <div>Sem id!</div>
+
+    <script>
+        // Conteúdo 1
+        $('#conteudo1')
+            .append('<p>1</p>') // Append insere o conteúdo dentro da tag do seletor
+
+        // Conteúdo 2
+        const elementos = [
+            $('<li>') // criando elementos com jQuery
+                .append('Arroz'),
+            $('<li></li>').append('Feifão'),
+            $('<li>').append('Carne') 
+        ]
+
+        const lista = $('<ul><li>Sorvete</li></ul>')
+                        .prepend(elementos) // prepend insere o conteúdo antes
+
+        $('#conteudo2').append(lista)
+
+        // Conteúdo 3
+        $('#conteudo3')
+            .append('<h1>2</h1>', '<h1>3</h1>') // pode ser passado dentro de um []
+            .prepend('<h1>1</h1>')
+
+        $('#conteudo3')
+            .html('<h1>123</h1>') // o html() substitui todo o conteúdo de texto da tag
+
+        $('#conteudo3')
+            .text('123') // insere apenas o texto dentro da tag
+
+        // Alterando todos
+        $('div[id]') // seleciona todas os elementos div que possuam a propriedade id  
+            .html('<strong>Todos!</strong>')
+    </script>
+</body>
