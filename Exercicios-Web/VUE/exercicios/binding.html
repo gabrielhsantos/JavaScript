@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Binding</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="/js/vue.min.js"></script>
+</head>
+<body class="exercicio">
+    <div id="app">
+        <p>{{ link }}</p>
+        <p><a href="{{ link }}">Canal?</a></p> <!-- Dará erro -->
+        <p><a v-bind:href="link">Canal!</a></p> <!-- Forma Correta de uso de uma propriedade interpolada -->
+        <p><a :href="link">Canal...</a></p> <!-- Forma Reduzida do Bind-->
+        <p>
+            <input type="text" v-model="nome"><br> <!-- Com 2 Way Data Bind-->
+            <span>{{ nome }}</span>
+        </p>
+        <p>
+                <input type="text" :value="nome"><br>
+                <span>{{ nome }}</span>
+            </p>
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                nome: "Maria",
+                link: "https://youtube.com/cod3rcursos"
+            },
+            watch: { // sempre que um atributo for alterado, ocorrerá o processamento do método de mesmo nome
+                nome(novoValor) {
+                    console.log(novoValor.toUpperCase())
+                }
+            }
+        })
+    </script>
+</body>
+</html>
