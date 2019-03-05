@@ -1,0 +1,17 @@
+mongo -version -> versão do MongoDB;
+
+mongo -> inicia a utilização do BD;
+
+show dbs -> consulta de banco de dados;
+
+use <nome do banco de dados> -> pode ser usado para um BD não existente;
+
+db.createCollection('<nome da collection>') -> cria uma collection com nome estados (OBS: Case Sensitive);
+
+show collections -> mostra as collections no BD atual;
+
+db.<nome da collection>.drop() -> deleta a collection indicada;
+
+db.help() -> lista de comandos;
+
+db. + (2 X Tab) -> mais comandos executáveis;

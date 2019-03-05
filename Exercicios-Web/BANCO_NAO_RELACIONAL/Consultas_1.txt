@@ -1,0 +1,19 @@
+db.estados.findOne() -> traz a primeira tupla;
+
+db.estados.findOne({sigla: "RJ"}) -> usando um filtro;
+
+db.estados.find({$or: [{sigla: "RJ"}, {sigla: "AC"}]}) -> padrão de consulta integrada (USANDO $);
+
+db.estados.find({populacao: {$exists: true}}) -> faz uma verificação se existe um atributo presente;
+
+db.estados.find().skip(1) -> irá pular o primeiro registro e começará já no segundo;
+
+db.estados.find().skip(1).limit(2) -> limita o resultado em 2 registros;
+
+db.estados.count() -> conta quantos registros a collection possui;
+
+db.estados.findOne({sigla: "SP"}, {nome: 1, sigla: 1}) -> pesquisa nos registros e informa os dados que serão carregados 
+
+db.estados.findOne({sigla: "SP"}, {nome: 1, sigla: 1, _id: 0}) -> não mostra o _id;
+
+db.estados.find({sigla: "SP"}, {"cidades.nome": 1, _id: 0}) -> filtro para dados específicos;

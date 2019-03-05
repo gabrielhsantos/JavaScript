@@ -1,0 +1,24 @@
+db.<nome da collection>.insert({<dados>}) -> inserindo dados (mesmo em um collection n existente);
+
+db.estados.insert({nome: "Acre", sigla: "AC", regiao: "Norte"}) -> exemplo de insert;
+
+db.<nome da collection>.save({<dados>}) -> outra opção de inserção de dados;
+
+db.estados.save({nome: "Alagoas", sigla: "AL", regiao: "Nordeste", populacao: 3322000}) -> exemplo de inserção com .save();
+
+db.<nome da collection>.find() -> mostra os dados entro da collection;
+
+db.estados.find() -> exemplo de find();
+
+db.<nome da collection>.find().pretty() -> retorna com um formato mais compreensivel como JSON;
+
+db.estados.insert({ 
+    nome: "Rio de Janeiro",
+    sigla: "RJ",
+    regiao: "Sudeste",
+    cidades: [{
+        nome: "Niteroi",
+        area: 133.9,
+        populacao: 487562
+    }]
+}) -> inserindo com quebra de linha e um array;
